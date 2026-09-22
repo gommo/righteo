@@ -11,11 +11,13 @@ you.
 
 1. **This repository is public. Never write a real identity into it.** Full
    rule below, because it has the most ways to go wrong.
-2. **Never merge, and never push to `main`.** Prepare the branch, open the PR,
-   stop. No phrasing authorises a merge except the maintainer doing it himself.
-   "Ship it" means push the branch. When a message reads as approval but the
-   action is irreversible, ask: one question costs seconds, an unwanted merge
-   costs trust.
+2. **Commit and push straight to `main`.** This is a single-maintainer
+   repository and there is nobody to review a pull request. Do not create a
+   branch or open a PR unless asked for one: it adds ceremony and leaves work
+   stranded off `main`. Revisit this rule the moment a second contributor
+   arrives. The irreversible-action guard still stands on its own: before
+   anything that cannot be undone, such as a force push, a history rewrite, a
+   published release or a deletion, ask first. One question costs seconds.
 3. **Never start a dev server or a build watcher.** Assume one is already
    running. When verification needs a live app, ask which port. Otherwise
    prefer the routes that need no server: tests, typecheck, build, reading
