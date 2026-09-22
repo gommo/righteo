@@ -1,0 +1,4 @@
+# Build output belongs at the repository root, not inside the source tree.
+# Cargo defaults target/ next to Cargo.toml, which buries 1.6 GB inside src-tauri/.
+[build]
+target-dir = "target"
