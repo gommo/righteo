@@ -14,6 +14,7 @@ const ROUTES = [
   ["/reconciliation", "Reconciliation"],
   ["/project", "Project detail"],
   ["/design", "Design system"],
+  ["/shell", "Shell probe"],
 ] as const;
 
 export function ReviewShell({ children }: { children: ReactNode }) {

@@ -71,10 +71,26 @@ commercial uses are not a blocker for this personal open-source repository.
 **Status:** Accepted
 
 Use Tauri 2 as the desktop application shell. Begin with macOS while preserving
-shared boundaries that can support later mobile work. A spike must still prove
-Dock presence, menu-bar presence, background behaviour, local storage and
-distribution, but those findings refine the Tauri architecture rather than
-reopening the shell choice by default.
+shared boundaries that can support later mobile work.
+
+**The M0 spike has run and all five claims hold.** Verified against a release
+bundle on macOS 26.5 (arm64), not against a dev server:
+
+| Claim | Result |
+| --- | --- |
+| Dock presence | Regular activation policy, `LSUIElement` absent. Launches from the Dock with a window. |
+| Menu-bar presence | A tray status item with a working `Show Righteo` / `Quit Righteo` menu. |
+| Background behaviour | Closing the window hides it and the process survives. Dock reopen restores the same instance, not a second one. `Cmd+Q` still quits. |
+| Local storage | SQLite via `rusqlite` in the Rust process, in the OS app-data directory, WAL enabled. A launch counter survived a full quit and relaunch. |
+| Distribution | `.app` at 10.4 MB and `.dmg` at 4.3 MB, both produced by `tauri build`. |
+
+The size is the headline: an Electron equivalent starts around 150 MB, because
+Tauri uses the system WebView instead of bundling a browser engine.
+
+Two distribution gaps are real and are tracked in `open-questions.md`. The
+bundle is ad-hoc signed, so Gatekeeper rejects it on any other machine, and it
+is arm64 only, because Rust here is installed through Homebrew rather than
+rustup and no second target is available.
 
 ## D-011: Reconciliation is tool-less
 
@@ -180,3 +196,23 @@ The two transports are not equally capable and the abstraction must not hide
 it. Structured-output enforcement differs, so the CLI adapter carries a
 stricter parse and a bounded repair retry, and every reconciliation run records
 which transport produced it.
+
+## D-016: Closing the window keeps Righteo resident
+
+**Status:** Accepted
+
+Closing the Righteo window hides it rather than quitting. The process keeps
+running behind a menu-bar item, and the Dock icon or the tray menu brings the
+window back to the same instance. `Cmd+Q` quits properly, so the app is never
+trapped.
+
+This is what a working-memory tool needs. Righteo is glanced at through the
+day rather than opened as a session, and the hub has to stay alive to collect
+evidence and, later, to emit the morning brief. An app that dies when its
+window closes cannot do either.
+
+It moves a little earlier than `mvp.md` planned, which deferred the menu-bar
+surface to keep the UI work down. The distinction that keeps it honest: this
+decision buys **residency**, not a second interface. The tray menu has two
+items and will not grow into a second way to read the working set. D-003 still
+holds and the Dock remains the primary surface.

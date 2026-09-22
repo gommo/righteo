@@ -71,7 +71,7 @@ strictly needs.
 | --- | --- |
 | Pushover delivery | The in-app loop is trusted. Intents are still generated and inspectable. |
 | Codex collector | The Claude Code collector proves the protocol boundary |
-| Menu-bar surface | Dock-first is the bet; a second surface doubles the UI work |
+| Menu-bar *interface* | Dock-first is the bet; a second surface doubles the UI work. The tray item from D-016 buys residency only, and stays at two menu entries |
 | Archiving, search, history browsing | There is no volume problem yet |
 | Multi-machine, remote collectors | D-005. The protocol seam stays; the transport does not. |
 | Onboarding, settings UI | One user, one machine. Config is a file. |
@@ -101,10 +101,16 @@ Everything else in the mockups is a later increment, not a promise.
 Each one ends in something demonstrable. Do not start the next until the
 previous one runs on real data.
 
-**M0. Shell and system.** Tauri window opening from the Dock, the token layer,
-the primitives, and a static Today rendered from a fixture. Proves the design
-survives contact with real components and that both themes are one definition
-rather than two.
+**M0. Shell and system. Done.** Tauri window opening from the Dock, the token
+layer, the primitives, and a static Today rendered from a fixture. Proves the
+design survives contact with real components and that both themes are one
+definition rather than two.
+
+The shell spike D-010 asked for has run against a release bundle, and its
+results are recorded in `decisions.md`. Residency behaviour changed as a
+result: closing the window now hides rather than quits (D-016). Two
+distribution gaps stay open, signing and arm64-only builds, and neither blocks
+M1.
 
 **M1. Evidence in.** Claude Code transcript and Git collectors writing through
 the evidence protocol into SQLite. Incremental, idempotent, restart-safe.

@@ -4,11 +4,15 @@
   "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@10.24.0",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "pnpm --filter @righteo/desktop dev",
     "build": "pnpm --filter @righteo/desktop build",
     "preview": "pnpm --filter @righteo/desktop preview",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "tauri:dev": "pnpm --filter @righteo/desktop tauri dev",
+    "tauri:build": "pnpm --filter @righteo/desktop tauri build"
   }
 }

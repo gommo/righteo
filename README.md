@@ -41,22 +41,34 @@ orchestration and project-management models.
 
 ## Running it
 
-Requires Node 22 and pnpm.
+Requires Node 22, pnpm, Rust and the Xcode command line tools.
 
 ```bash
 pnpm install
-pnpm dev        # http://localhost:5273
+pnpm dev          # web only, http://localhost:5273
+pnpm tauri:dev    # the real desktop app
 ```
 
-Right now the app **is** the design system showcase and nothing else. That is
-deliberate: components are built and iterated there against realistic content
-before they are wired into a screen (see the rules in `AGENTS.md`). The Today
-screen arrives in M0, described in `docs/mvp.md`.
+Building a distributable macOS bundle:
 
 ```bash
-pnpm build      # typecheck and production build
+pnpm tauri:build  # .app and .dmg in apps/desktop/src-tauri/target/release/bundle
+```
+
+Two caveats on that bundle. It is ad-hoc signed, so Gatekeeper will refuse it
+on any machine other than the one that built it, and it is arm64 only unless
+you install rustup and add the `x86_64-apple-darwin` target. Both are tracked
+in `docs/open-questions.md`.
+
+```bash
+pnpm build      # typecheck and production build of the web assets
 pnpm typecheck  # types only
 ```
+
+Screens are still rendered from fixtures. Nothing reads your real projects
+yet: that is M1, described in `docs/mvp.md`. The review harness carries a
+`Shell probe` route that reports the SQLite database the Rust process is
+actually using, which is how the M0 spike was verified.
 
 ## Documentation
 

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { navigate, useLocation } from "@/lib/router";
 import { ReviewShell } from "@/design/review-shell";
 import { DesignShowcase } from "@/design/showcase";
+import { ShellProbe } from "@/design/shell-probe";
 import { ProjectDetailScreen } from "@/screens/project-detail";
 import { ReconciliationScreen } from "@/screens/reconciliation";
 import { TodayScreen } from "@/screens/today";
@@ -18,6 +19,7 @@ export function App() {
       {path === "/reconciliation" && <ReconciliationScreen />}
       {path === "/project" && <ProjectDetailScreen />}
       {path === "/design" && <DesignShowcase />}
+      {path === "/shell" && <ShellProbe />}
       {(path === "/today" || path === "/") && <TodayScreen />}
     </ReviewShell>
   );

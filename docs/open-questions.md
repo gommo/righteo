@@ -75,14 +75,26 @@ topic sections below; this list exists so the blockers are visible in one place.
 
 ## Platform
 
-- Which open-source licence should the repository use?
 - Should one Tauri 2 application own the Dock UI, menu-bar UI and background
-  collection lifecycle, or should the collector become a helper process?
+  collection lifecycle, or should the collector become a helper process? The
+  M0 spike keeps the process resident (D-016), which makes this answerable but
+  does not answer it.
 - When an Android viewer is designed, does Tauri's mobile path meet its actual
   requirements or is a separate Capacitor shell justified?
-- What is the minimum supported macOS version?
-- What signing, notarisation and update approach suits an open-source personal
-  app?
+- **Signing and notarisation.** The M0 bundle is ad-hoc signed, so Gatekeeper
+  refuses it anywhere but the machine that built it. Shipping to a second Mac
+  needs a Developer ID certificate, a paid Apple Developer account and a
+  notarisation step in the build. Decide whether Righteo is distributed as a
+  signed `.dmg`, as source to build locally, or through Homebrew.
+- **Universal binaries.** The build is arm64 only. Rust here comes from
+  Homebrew, which carries just the host target, so an Intel or universal build
+  needs rustup and the `x86_64-apple-darwin` target added. Decide whether
+  Intel Macs are supported at all before wiring this into a release.
+- What update mechanism, if any? Tauri's updater needs a signing key and a
+  hosted manifest, which is a maintenance commitment for a personal app.
+
+Resolved: the licence is MIT, and the minimum supported macOS is 13.0, set in
+`tauri.conf.json`.
 
 ## Notifications
 
