@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    a { color: #9a6316; }
+    a:hover { color: #74490f; }
+  </style>
+</helmet>
+
+<div style="width: 1040px; background: #f5f2ea; color: #23211d; padding: 44px; display: flex; flex-direction: column; gap: 44px;">
+
+  <!-- Header -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: 'Literata', Georgia, serif; font-size: 38px; line-height: 1.05; font-weight: 500;">Foundations</div>
+    <div style="font-size: 14px; color: #6b6659; max-width: 680px;">Direction A, paper and graphite. Light is the primary environment. Dark is a designed counterpart: the material changes from paper to a graphite board rather than the paper turning black. Swatches are split, light on the left, dark on the right, with the literal values beside them.</div>
+  </div>
+
+  <!-- Colour table -->
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Colour</div>
+
+    <div style="display: grid; grid-template-columns: 56px 132px 190px 190px minmax(0, 1fr); gap: 10px 14px; align-items: center;">
+
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #7a7466;"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #7a7466;">Token</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #7a7466;">Light</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #7a7466;">Dark</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #7a7466;">Use</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #f5f2ea 0 50%, #1c1b18 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">canvas</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#f5f2ea</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#1c1b18</div>
+      <div style="font-size: 12px; color: #6b6659;">Window background</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #fffdf7 0 50%, #24231f 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">surface</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#fffdf7</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#24231f</div>
+      <div style="font-size: 12px; color: #6b6659;">Cards, narrate surface</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #f2efe6 0 50%, #1f1e1a 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">surface-sunken</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#f2efe6</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#1f1e1a</div>
+      <div style="font-size: 12px; color: #6b6659;">Blocked note, parked rows</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #ddd6c7 0 50%, #35332d 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">border</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#ddd6c7</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#35332d</div>
+      <div style="font-size: 12px; color: #6b6659;">Card edge</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #e0dacd 0 50%, #2e2c27 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">rule</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#e0dacd</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#2e2c27</div>
+      <div style="font-size: 12px; color: #6b6659;">Hairline inside a card</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #23211d 0 50%, #ede9df 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">ink</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#23211d</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#ede9df</div>
+      <div style="font-size: 12px; color: #6b6659;">Outcome, titles, next actions</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #4c4840 0 50%, #c3bdb0 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">ink-secondary</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#4c4840</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#c3bdb0</div>
+      <div style="font-size: 12px; color: #6b6659;">The Now line, body detail</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #6b6659 0 50%, #948e80 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">ink-muted</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#6b6659</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#948e80</div>
+      <div style="font-size: 12px; color: #6b6659;">Labels, meta, peripheral copy</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #7a7466 0 50%, #8f8a7c 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">ink-faint</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#7a7466</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#8f8a7c</div>
+      <div style="font-size: 12px; color: #6b6659;">Placeholder only. Never body copy.</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #f6e3b4 0 50%, #55472d 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">highlight-wash</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#f6e3b4</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">rgba(224,174,84,0.26)</div>
+      <div style="font-size: 12px; color: #6b6659;">The mark under the outcome line</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #d9a441 0 50%, #e0ae54 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">highlight-mark</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#d9a441</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#e0ae54</div>
+      <div style="font-size: 12px; color: #6b6659;">Next-action bullets, ordinals</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #9a6316 0 50%, #f0c473 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">highlight-strong</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#9a6316</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#f0c473</div>
+      <div style="font-size: 12px; color: #6b6659;">Links, "Why is this here?"</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #465b66 0 50%, #9db4bd 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">evidence</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#465b66</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#9db4bd</div>
+      <div style="font-size: 12px; color: #6b6659;">Evidence text and provenance chips</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #e2e9ec 0 50%, #343634 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">evidence-bg</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#e2e9ec</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">rgba(157,180,189,0.13)</div>
+      <div style="font-size: 12px; color: #6b6659;">Provenance chip background</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #23211d 0 50%, #ede9df 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">action</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#23211d</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#ede9df</div>
+      <div style="font-size: 12px; color: #6b6659;">The Righteo button fill</div>
+
+      <div style="width: 56px; height: 32px; border-radius: 4px; border: 1px solid #ddd6c7; background: linear-gradient(115deg, #f8f4ea 0 50%, #23211d 50% 100%);"></div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">on-action</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#f8f4ea</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4c4840;">#23211d</div>
+      <div style="font-size: 12px; color: #6b6659;">Text on the Righteo button</div>
+
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 18px; background: #fffdf7; border: 1px solid #e0dacd; border-radius: 8px;">
+      <div style="font-size: 13px; color: #4c4840; line-height: 1.5;">Every text token clears 4.5:1 on its own surface in both modes, <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">ink-faint</span> included, so placeholders stay readable. There is no red in this system: lateness and incompletion get no colour at all.</div>
+      <div style="font-size: 13px; color: #4c4840; line-height: 1.5;">The action button is always the inverse of the page: graphite on paper, cream on the board. It is the one deliberately loud object, and it is loud through contrast rather than saturation.</div>
+    </div>
+  </div>
+
+  <!-- The highlighter -->
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">The highlighter</div>
+    <div style="font-size: 14px; color: #4c4840; max-width: 700px; line-height: 1.5;">The signature of this direction, and the whole reason it is called paper and graphite. The outcome line, and only the outcome line, carries the mark.</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
+      <div style="background: #fffdf7; border: 1px solid #ddd6c7; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Light</div>
+        <div style="font-size: 15px; line-height: 1.45;"><span style="background: linear-gradient(transparent 62%, #f6e3b4 62%);">Players can see what changed in their scene without asking in Discord.</span></div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">linear-gradient(transparent 62%, #f6e3b4 62%)</div>
+      </div>
+      <div style="background: #24231f; border: 1px solid #35332d; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #948e80;">Dark</div>
+        <div style="font-size: 15px; line-height: 1.45; color: #ede9df;"><span style="background: linear-gradient(transparent 62%, rgba(224,174,84,0.26) 62%);">Players can see what changed in their scene without asking in Discord.</span></div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #948e80;">Opaque yellow would glare, so it goes translucent.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Type -->
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Type</div>
+    <div style="display: grid; grid-template-columns: 172px minmax(0, 1fr); gap: 14px 24px; align-items: baseline;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">Literata 34 / 1.1</div>
+      <div style="font-family: 'Literata', Georgia, serif; font-size: 34px; font-weight: 500; line-height: 1.1;">Morning Sam</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">Literata 20 / 1.2</div>
+      <div style="font-family: 'Literata', Georgia, serif; font-size: 20px; font-weight: 600;">Harbour</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">Public Sans 15 / 1.45</div>
+      <div style="font-size: 15px; line-height: 1.45;">Players can see what changed in their scene without asking in Discord.</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">Public Sans 13 / 1.45</div>
+      <div style="font-size: 13px; color: #4c4840;">Cutover needs a sign-off date. Asked Tuesday, nothing back.</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">Plex Mono 11</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #465b66;">git · 4 commits on feed-events</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">Plex Mono 10 caps</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Outcome · Now · Next · Blocked</div>
+    </div>
+    <div style="font-size: 13px; color: #4c4840; padding: 14px 18px; background: #fffdf7; border: 1px solid #e0dacd; border-radius: 8px; line-height: 1.5;">Mono means a machine said it. Never use mono for state the user wrote. Uppercase is reserved for the structural labels.</div>
+  </div>
+
+  <!-- Emphasis ladder -->
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">The emphasis ladder</div>
+    <div style="font-size: 14px; color: #4c4840; max-width: 720px; line-height: 1.5;">Emphasis is derived from the working set at render time. It is not a status field and must never be persisted as one. This direction spends the highlighter rather than luminance on the top step, so every level carries a cue that is not colour: the ordinal, the label it sits under, or the absence of the mark.</div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-items: start;">
+      <div style="background: #fffdf7; border: 1px solid #ddd6c7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 9px; box-shadow: 0 2px 5px rgba(35,33,29,0.05);">
+        <div style="display: flex; align-items: baseline; gap: 9px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #23211d;">01</span>
+          <span style="font-family: 'Literata', Georgia, serif; font-size: 20px; font-weight: 600;">Focal</span>
+        </div>
+        <div style="font-size: 12px; color: #6b6659; line-height: 1.45;">Paper, shadow, and the highlighter on its outcome. One at a time.</div>
+      </div>
+      <div style="background: #fffdf7; border: 1px solid #ddd6c7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 9px;">
+        <div style="display: flex; align-items: baseline; gap: 9px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">02</span>
+          <span style="font-family: 'Literata', Georgia, serif; font-size: 20px; font-weight: 600;">Active</span>
+        </div>
+        <div style="font-size: 12px; color: #6b6659; line-height: 1.45;">Same paper, no shadow, no mark. Ordinal stays.</div>
+      </div>
+      <div style="background: #f2efe6; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 9px;">
+        <div style="font-family: 'Literata', Georgia, serif; font-size: 15px; font-weight: 500;">Peripheral</div>
+        <div style="font-size: 12px; color: #6b6659; line-height: 1.45;">Compact tile under the ALSO ACTIVE label. No border, no ordinal.</div>
+      </div>
+      <div style="border-left: 2px solid #ddd6c7; padding: 4px 16px 4px 14px; display: flex; flex-direction: column; gap: 9px;">
+        <div style="font-family: 'Literata', Georgia, serif; font-size: 15px; font-weight: 500; color: #6b6659;">Parked</div>
+        <div style="font-size: 12px; color: #6b6659; line-height: 1.45;">No fill at all. Labelled in words: out of the way, not gone.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Provenance -->
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Provenance marks</div>
+    <div style="font-size: 14px; color: #4c4840; max-width: 720px; line-height: 1.5;">Border style carries the distinction as well as colour, so it survives greyscale and colour blindness. This is the visible form of keeping evidence, narration and inference apart.</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;">
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #465b66; background: #e2e9ec; padding: 4px 9px; border-radius: 4px;">narrated</span></div>
+        <div style="font-size: 13px; color: #4c4840; line-height: 1.45;">Filled, no border. You said it. Outranks everything below.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #465b66; background: #e2e9ec; border: 1px solid #465b66; padding: 3px 8px; border-radius: 4px;">observed</span></div>
+        <div style="font-size: 13px; color: #4c4840; line-height: 1.45;">Solid border. A collector saw it happen. Not proof it mattered.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #465b66; background: transparent; border: 1px dashed #465b66; padding: 3px 8px; border-radius: 4px;">inferred</span></div>
+        <div style="font-size: 13px; color: #4c4840; line-height: 1.45;">Dashed, unfilled. The model concluded it. Correctable.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Space, radius, focus, motion -->
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px;">
+
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Space and radius</div>
+      <div style="display: flex; align-items: flex-end; gap: 6px;">
+        <div style="width: 8px; height: 8px; background: #d9a441; border-radius: 1px;"></div>
+        <div style="width: 14px; height: 14px; background: #d9a441; border-radius: 1px;"></div>
+        <div style="width: 18px; height: 18px; background: #d9a441; border-radius: 1px;"></div>
+        <div style="width: 22px; height: 22px; background: #d9a441; border-radius: 1px;"></div>
+        <div style="width: 30px; height: 30px; background: #d9a441; border-radius: 1px;"></div>
+        <div style="width: 44px; height: 44px; background: #d9a441; border-radius: 1px;"></div>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">Structural: 8 · 14 · 18 · 22 · 30 · 44</div>
+      <div style="font-size: 13px; color: #4c4840; line-height: 1.5;">Deliberately not a strict 4/8 grid. Section gaps, card padding and gutters use the coarse steps; inside a component, finer values are allowed where optical alignment beats grid purity.</div>
+      <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+        <div style="width: 42px; height: 32px; border: 1px solid #ddd6c7; border-radius: 4px;"></div>
+        <div style="width: 42px; height: 32px; border: 1px solid #ddd6c7; border-radius: 7px;"></div>
+        <div style="width: 42px; height: 32px; border: 1px solid #ddd6c7; border-radius: 8px;"></div>
+        <div style="width: 42px; height: 32px; border: 1px solid #ddd6c7; border-radius: 10px;"></div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">4 chip · 7 control · 8 tile · 10 card</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Focus and motion</div>
+      <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 8px; background: #23211d; color: #f8f4ea; padding: 9px 18px; border-radius: 7px; font-size: 14px; font-weight: 600; border: 1px solid #d9a441; box-shadow: 0 0 0 3px rgba(217,164,65,0.42);">
+          <span>Righteo</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="M13 6l6 6-6 6"></path></svg>
+        </div>
+        <div style="font-size: 13px; color: #6b6659; flex-grow: 1;">Always visible, never suppressed on mouse input.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9a6316; width: 54px;">120ms</span><span style="font-size: 13px; color: #4c4840;">Control feedback</span></div>
+        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9a6316; width: 54px;">220ms</span><span style="font-size: 13px; color: #4c4840;">A card changing emphasis level</span></div>
+        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9a6316; width: 54px;">320ms</span><span style="font-size: 13px; color: #4c4840;">Narration folding in, deferred work receding</span></div>
+      </div>
+      <div style="font-size: 13px; color: #4c4840; line-height: 1.5; padding: 14px 18px; background: #fffdf7; border: 1px solid #e0dacd; border-radius: 8px;">Under reduced motion every one of these becomes an instant state change. No essential meaning may live in the transition itself.</div>
+    </div>
+
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    a { color: #b0651f; }
+    a:hover { color: #8a4d14; }
+    .mono { font-family: ui-monospace, 'SF Mono', 'Menlo', monospace; }
+  </style>
+</helmet>
+
+<div style="width: 1040px; min-height: 980px; background: #dedee1; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
+
+  <!-- Foundations strip -->
+  <div style="background: #ffffff; border: 1px solid #d0d0d4; border-radius: 8px; padding: 16px 18px; display: flex; gap: 32px; align-items: flex-start;">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div class="mono" style="font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #6e6e73;">Window and text</div>
+      <div style="display: flex; gap: 6px;">
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #dedee1; border: 1px solid #c8c8cc;"></div>
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #f6f6f7; border: 1px solid #c8c8cc;"></div>
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #6e6e73;"></div>
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #1d1d1f;"></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div class="mono" style="font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #6e6e73;">Orientation (warm)</div>
+      <div style="display: flex; gap: 6px;">
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #f6e6d6;"></div>
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #d98b47;"></div>
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #b0651f;"></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div class="mono" style="font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #6e6e73;">Evidence and focus</div>
+      <div style="display: flex; gap: 6px;">
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #e6ecf0;"></div>
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #5b7a8c;"></div>
+        <div style="width: 36px; height: 36px; border-radius: 5px; background: #0a84ff;"></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 3px; flex-grow: 1;">
+      <div class="mono" style="font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #6e6e73;">Type</div>
+      <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.01em; color: #1d1d1f;">SF Pro, everything structural</div>
+      <div style="font-size: 13px; color: #6e6e73;">System sizes: 13 body, 11 secondary, 19 title</div>
+      <div class="mono" style="font-size: 11px; color: #5b7a8c;">SF Mono, evidence only</div>
+    </div>
+  </div>
+
+  <!-- The window -->
+  <div style="background: #ffffff; border: 1px solid #c4c4c8; border-radius: 10px; overflow: hidden; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.14); min-height: 800px;">
+
+    <!-- Sidebar -->
+    <div style="width: 218px; background: #f0eff2; border-right: 1px solid #d8d8dc; display: flex; flex-direction: column; flex-shrink: 0;">
+      <div style="display: flex; gap: 8px; padding: 14px 14px 18px;">
+        <div style="width: 11px; height: 11px; border-radius: 50%; background: #ff5f57;"></div>
+        <div style="width: 11px; height: 11px; border-radius: 50%; background: #febc2e;"></div>
+        <div style="width: 11px; height: 11px; border-radius: 50%; background: #28c840;"></div>
+      </div>
+      <div style="padding: 0 10px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+          <div style="font-size: 11px; font-weight: 600; color: #6e6e73; padding: 0 8px 4px;">Today</div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 5px; background: #9a5718; color: #ffffff;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <span style="font-size: 13px; font-weight: 500;">Working set</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 5px; color: #1d1d1f;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h10"></path></svg>
+            <span style="font-size: 13px;">Narrate</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+          <div style="font-size: 11px; font-weight: 600; color: #6e6e73; padding: 0 8px 4px;">Projects</div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 5px;">
+            <div style="width: 8px; height: 8px; border-radius: 2px; background: #b0651f;"></div>
+            <span style="font-size: 13px; color: #1d1d1f;">Harbour</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 5px;">
+            <div style="width: 8px; height: 8px; border-radius: 2px; background: #b0651f;"></div>
+            <span style="font-size: 13px; color: #1d1d1f;">Ledger</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 5px;">
+            <div style="width: 8px; height: 8px; border-radius: 2px; background: transparent; border: 1.5px solid #9a9aa0;"></div>
+            <span style="font-size: 13px; color: #6e6e73;">Toolbox</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 5px;">
+            <div style="width: 8px; height: 8px; border-radius: 2px; background: transparent; border: 1.5px solid #9a9aa0;"></div>
+            <span style="font-size: 13px; color: #6e6e73;">Righteo</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 5px;">
+            <div style="width: 8px; height: 8px; border-radius: 2px; background: transparent; border: 1.5px solid #9a9aa0;"></div>
+            <span style="font-size: 13px; color: #6e6e73;">Skirmish</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div style="flex-grow: 1; display: flex; flex-direction: column;">
+
+      <!-- Toolbar -->
+      <div style="height: 46px; border-bottom: 1px solid #e2e2e6; background: #f8f8f9; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; flex-shrink: 0;">
+        <div style="font-size: 13px; font-weight: 600; color: #1d1d1f;">Today</div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span class="mono" style="font-size: 11px; color: #6e6e73;">Wed 19 Aug</span>
+          <div style="display: flex; align-items: center; gap: 5px; border: 1px solid #c8c8cc; background: #ffffff; border-radius: 5px; padding: 3px 9px; font-size: 12px; color: #1d1d1f;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+            <span>Narrate</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 22px;">
+
+        <!-- Orientation -->
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div style="font-size: 22px; font-weight: 600; letter-spacing: -0.015em; color: #1d1d1f;">Morning Sam</div>
+          <div style="font-size: 13px; color: #6e6e73;">You touched five projects yesterday. Two look like the main thread.</div>
+        </div>
+
+        <!-- Narrate field -->
+        <div style="border: 1px solid #c8c8cc; border-radius: 7px; background: #ffffff; display: flex; flex-direction: column; box-shadow: 0 0 0 3px rgba(10,132,255,0.16);">
+          <div style="padding: 12px 14px; font-size: 14px; color: #74747a;">What's in your head today?</div>
+          <div style="border-top: 1px solid #e8e8ec; padding: 8px 10px; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 11px; color: #6e6e73;">Paste a list, ramble, contradict yourself. No project or date needed.</span>
+            <div style="background: #b0651f; color: #ffffff; padding: 4px 14px; border-radius: 5px; font-size: 13px; font-weight: 500;">Righteo</div>
+          </div>
+        </div>
+
+        <!-- Working set as rows -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #6e6e73;">Primary</div>
+
+          <!-- Harbour row -->
+          <div style="border: 1px solid #d8d8dc; border-radius: 8px; background: #ffffff; overflow: hidden;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 12px 15px; background: #faf6f1; border-bottom: 1px solid #ebe4dc;">
+              <div style="font-size: 15px; font-weight: 600; color: #1d1d1f;">Harbour</div>
+              <div class="mono" style="font-size: 11px; color: #4a6576;">11 sessions</div>
+            </div>
+            <div style="padding: 13px 15px; display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 9px 14px; align-items: baseline;">
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #6e6e73;">Outcome</div>
+              <div style="font-size: 13px; line-height: 1.45; color: #1d1d1f; text-wrap: pretty;">Players can see what changed in their scene without asking in Discord.</div>
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #6e6e73;">Now</div>
+              <div style="font-size: 13px; line-height: 1.45; color: #444448; text-wrap: pretty;">Activity feed renders from the events table. Ranking recalc still runs off the old cron path.</div>
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #6e6e73;">Next</div>
+              <div style="display: flex; flex-direction: column; gap: 5px;">
+                <div style="display: flex; gap: 9px;"><span style="font-size: 13px; color: #d98b47;">1</span><span style="font-size: 13px; color: #1d1d1f;">Point recalc at the events table</span></div>
+                <div style="display: flex; gap: 9px;"><span style="font-size: 13px; color: #d98b47;">2</span><span style="font-size: 13px; color: #1d1d1f;">Settle the forum schema before the migration</span></div>
+                <div style="display: flex; gap: 9px;"><span style="font-size: 13px; color: #d98b47;">3</span><span style="font-size: 13px; color: #1d1d1f;">Review the tournament import PR</span></div>
+              </div>
+            </div>
+            <div style="padding: 8px 15px; border-top: 1px solid #ebebef; background: #fafafb; display: flex; align-items: center; gap: 8px;">
+              <span class="mono" style="font-size: 10px; color: #3d5666; background: #e6ecf0; padding: 2px 6px; border-radius: 3px;">narrated</span>
+              <span class="mono" style="font-size: 10px; color: #3d5666; background: #e6ecf0; padding: 2px 6px; border-radius: 3px;">claude · git</span>
+              <span style="flex-grow: 1;"></span>
+              <span style="font-size: 12px; color: #b0651f;">Why is this here?</span>
+            </div>
+          </div>
+
+          <!-- Ledger row -->
+          <div style="border: 1px solid #d8d8dc; border-radius: 8px; background: #ffffff; overflow: hidden;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 12px 15px; background: #faf6f1; border-bottom: 1px solid #ebe4dc;">
+              <div style="font-size: 15px; font-weight: 600; color: #1d1d1f;">Ledger</div>
+              <div class="mono" style="font-size: 11px; color: #4a6576;">4 sessions</div>
+            </div>
+            <div style="padding: 13px 15px; display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 9px 14px; align-items: baseline;">
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #6e6e73;">Outcome</div>
+              <div style="font-size: 13px; line-height: 1.45; color: #1d1d1f; text-wrap: pretty;">The season runs on the new data model with no manual reconciliation.</div>
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #6e6e73;">Now</div>
+              <div style="font-size: 13px; line-height: 1.45; color: #444448; text-wrap: pretty;">Migration passes on staging. Production cutover is not scheduled.</div>
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #6e6e73;">Next</div>
+              <div style="display: flex; flex-direction: column; gap: 5px;">
+                <div style="display: flex; gap: 9px;"><span style="font-size: 13px; color: #d98b47;">1</span><span style="font-size: 13px; color: #1d1d1f;">Dry-run against a production snapshot</span></div>
+                <div style="display: flex; gap: 9px;"><span style="font-size: 13px; color: #d98b47;">2</span><span style="font-size: 13px; color: #1d1d1f;">Pick a cutover window</span></div>
+              </div>
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #6e6e73;">Blocked</div>
+              <div style="font-size: 13px; line-height: 1.45; color: #444448; text-wrap: pretty;">Cutover needs a sign-off date. Asked Tuesday, nothing back.</div>
+            </div>
+            <div style="padding: 8px 15px; border-top: 1px solid #ebebef; background: #fafafb; display: flex; align-items: center; gap: 8px;">
+              <span class="mono" style="font-size: 10px; color: #3d5666; background: #e6ecf0; padding: 2px 6px; border-radius: 3px;">inferred</span>
+              <span style="flex-grow: 1;"></span>
+              <span style="font-size: 12px; color: #b0651f;">Why is this here?</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Also active -->
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #6e6e73;">Also active</div>
+          <div style="border: 1px solid #e2e2e6; border-radius: 7px; overflow: hidden;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 9px 14px; border-bottom: 1px solid #eeeef1;">
+              <span style="font-size: 13px; color: #1d1d1f;">Toolbox</span>
+              <span style="font-size: 12px; color: #6e6e73;">Quiet since Friday</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 9px 14px; border-bottom: 1px solid #eeeef1;">
+              <span style="font-size: 13px; color: #1d1d1f;">Righteo</span>
+              <span style="font-size: 12px; color: #6e6e73;">Design docs, no code yet</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 9px 14px;">
+              <span style="font-size: 13px; color: #1d1d1f;">Skirmish</span>
+              <span style="font-size: 12px; color: #6e6e73;">Release check kept for Friday</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/*
+ * Righteo tokens: direction A, paper and graphite.
+ * The written contract is design/TOKENS.md. This file is its single
+ * implementation. Light is the primary environment; dark is a designed
+ * counterpart, not an inversion.
+ *
+ * Rule: no component may use a literal colour or font size. If a value is
+ * missing here, add it here.
+ */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --canvas: #f5f2ea;
+  --surface: #fffdf7;
+  --surface-sunken: #f2efe6;
+  --border: #ddd6c7;
+  --rule: #e0dacd;
+
+  --ink: #23211d;
+  --ink-secondary: #4c4840;
+  --ink-muted: #6b6659;
+  --ink-faint: #7a7466;
+
+  --highlight-wash: #f6e3b4;
+  --highlight-mark: #d9a441;
+  --highlight-strong: #9a6316;
+  --link-hover: #74490f;
+
+  --evidence: #465b66;
+  --evidence-bg: #e2e9ec;
+
+  --action: #23211d;
+  --on-action: #f8f4ea;
+
+  /* Paper sits on a desk and casts a shadow. A graphite board does not. */
+  --card-shadow: 0 2px 5px rgba(35, 33, 29, 0.05);
+  --card-shadow-soft: 0 1px 2px rgba(35, 33, 29, 0.04);
+  --focus-ring: 0 0 0 3px rgba(217, 164, 65, 0.42);
+}
+
+.dark {
+  --canvas: #1c1b18;
+  --surface: #24231f;
+  --surface-sunken: #1f1e1a;
+  --border: #35332d;
+  --rule: #2e2c27;
+
+  --ink: #ede9df;
+  --ink-secondary: #c3bdb0;
+  --ink-muted: #948e80;
+  --ink-faint: #8f8a7c;
+
+  --highlight-wash: rgba(224, 174, 84, 0.26);
+  --highlight-mark: #e0ae54;
+  --highlight-strong: #f0c473;
+  --link-hover: #f8dda6;
+
+  --evidence: #9db4bd;
+  --evidence-bg: rgba(157, 180, 189, 0.13);
+
+  --action: #ede9df;
+  --on-action: #23211d;
+
+  --card-shadow: none;
+  --card-shadow-soft: none;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-border-token: var(--border);
+  --color-rule: var(--rule);
+
+  --color-ink: var(--ink);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+
+  --color-highlight-wash: var(--highlight-wash);
+  --color-highlight-mark: var(--highlight-mark);
+  --color-highlight-strong: var(--highlight-strong);
+  --color-link-hover: var(--link-hover);
+
+  --color-evidence: var(--evidence);
+  --color-evidence-bg: var(--evidence-bg);
+
+  --color-action: var(--action);
+  --color-on-action: var(--on-action);
+
+  --font-display: "Literata", Georgia, serif;
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-chip: 4px;
+  --radius-control: 7px;
+  --radius-tile: 8px;
+  --radius-card: 10px;
+}
+
+@layer base {
+  html {
+    background-color: var(--canvas);
+  }
+  body {
+    margin: 0;
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-color: var(--highlight-mark);
+  }
+}
+
+@layer utilities {
+  /*
+   * The signature of this direction. Only OutcomeLine may use it: if the mark
+   * appears anywhere else it stops meaning anything.
+   */
+  .highlighted {
+    background-image: linear-gradient(
+      transparent 62%,
+      var(--highlight-wash) 62%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

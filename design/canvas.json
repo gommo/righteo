@@ -1,0 +1,62 @@
+{
+  "pages": [
+    { "id": "screens", "name": "Screens" },
+    { "id": "system", "name": "Design system" },
+    { "id": "directions", "name": "Directions (decided)" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Today · light", "page": "screens", "x": 0, "y": 0, "w": 1056, "h": 1140 },
+    { "file": "TodayDark.dc.html", "title": "Today · dark", "page": "screens", "x": 1160, "y": 0, "w": 1056, "h": 1140 },
+    { "file": "Reconciliation.dc.html", "title": "Reconciliation result", "page": "screens", "x": 2320, "y": 0, "w": 1056, "h": 1020 },
+    { "file": "ProjectDetail.dc.html", "title": "Project detail", "page": "screens", "x": 3480, "y": 0, "w": 1056, "h": 940 },
+
+    { "file": "Foundations.dc.html", "title": "Foundations · tokens", "page": "system", "x": 0, "y": 0, "w": 1056, "h": 2640 },
+    { "file": "Components.dc.html", "title": "Components", "page": "system", "x": 1160, "y": 0, "w": 1056, "h": 1740 },
+
+    { "file": "MorningLight.dc.html", "title": "B · Morning light on a dark desk", "page": "directions", "x": 0, "y": 0, "w": 1056, "h": 1180 },
+    { "file": "NativeUtility.dc.html", "title": "C · Native macOS utility", "page": "directions", "x": 1160, "y": 0, "w": 1056, "h": 1040 }
+  ],
+  "annotations": [
+    {
+      "id": "screens-note",
+      "page": "screens",
+      "x": 0,
+      "y": -320,
+      "w": 720,
+      "text": "Direction A, paper and graphite, applied to the four screens that matter.\n\nToday appears twice on purpose. Light is the primary environment here and dark is its designed counterpart, not an inversion: the paper does not turn black, the material changes to a graphite board, the highlighter goes translucent so it does not glare, and the action button flips from graphite-on-paper to cream-on-board so it stays the loudest contrast either way.\n\nReconciliation is the screen the product lives or dies on: it has to read as compression and relief, not as ten tasks being created. Project detail puts evidence underneath state and makes a correction a one-click aside rather than a form."
+    },
+    {
+      "id": "system-note",
+      "page": "system",
+      "x": 0,
+      "y": -320,
+      "w": 720,
+      "text": "Tokens and the component layer. The written contract is design/TOKENS.md, and the sheet on the left prints the literal values so nothing has to be eyedropped.\n\nThe interesting layer is not the primitives: buttons and inputs come from shadcn on Base UI and are deliberately boring. It is the Righteo layer above them, where each component encodes a product invariant in its API.\n\nNextActions takes a tuple of at most three, so the three-action rule is a type rather than a review comment. BlockedNote renders nothing when there is no blocker. Emphasis is a prop derived from the working set, never a stored status field. OutcomeLine is the only element allowed to carry the highlighter, so the mark keeps meaning something."
+    },
+    {
+      "id": "decision-note",
+      "page": "directions",
+      "x": 0,
+      "y": -320,
+      "w": 720,
+      "text": "Decided: A, paper and graphite. It now lives on the Screens page.\n\nWhat won it: it is the furthest of the three from a backlog tool, and the highlighter gives the focal card its emphasis without inventing a status colour. Its known risk is looking like a note-taking app rather than something with live evidence behind it, which is why the evidence layer is drawn in a cool slate and the provenance chips are always present.\n\nThe two runners-up are kept here as the record. Neither is a dead idea: B's emphasis-as-light-level extends to four steps more gracefully than the highlighter does, and C's persistent sidebar makes parked work visible without spending main-column space. Both are worth stealing from if A turns out short."
+    },
+    {
+      "id": "dir-b-note",
+      "page": "directions",
+      "x": 0,
+      "y": 1250,
+      "w": 460,
+      "text": "B · Morning light on a dark desk\n\nBet: dark-first, with a single warm plane of light falling on the project that most deserves attention.\n\nFor: the emphasis ladder becomes light level, which extends to four steps without four hues.\n\nAgainst: dark plus a large serif greeting is the closest of the three to current AI-product house style."
+    },
+    {
+      "id": "dir-c-note",
+      "page": "directions",
+      "x": 1160,
+      "y": 1250,
+      "w": 460,
+      "text": "C · Native macOS utility\n\nBet: sidebar and content, system type, system densities, one warm accent. Looks like it shipped with the OS.\n\nFor: answers the Dock-first goal most directly, and the sidebar makes parked work visible without competing for the main column.\n\nAgainst: the denser row layout pushes back towards a list of things to do, which is the thing the product is not. It is also the least distinctive."
+    }
+  ],
+  "launch": { "view": "canvas", "page": "screens" }
+}

@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+coverage/
+*.tsbuildinfo
+.vite/
+.turbo/
+
+# Rust and Tauri
+target/
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# Local database and logs
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Agent tooling: skills are committed via the symlink, local state is not
+.claude/*
+!.claude/skills

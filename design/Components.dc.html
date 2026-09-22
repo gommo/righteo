@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    a { color: #9a6316; }
+    a:hover { color: #74490f; }
+  </style>
+</helmet>
+
+<div style="width: 1040px; background: #f5f2ea; color: #23211d; padding: 40px 44px 36px; display: flex; flex-direction: column; gap: 38px;">
+
+  <!-- Header -->
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: 'Literata', Georgia, serif; font-size: 38px; font-weight: 500; line-height: 1.05; letter-spacing: -0.01em;">Components</div>
+    <div style="font-size: 14px; line-height: 1.5; color: #6b6659; max-width: 700px;">The Righteo layer, above the shadcn and Base UI primitives. Each of these exists because it encodes a product invariant in its API, so a screen cannot quietly break the rule.</div>
+  </div>
+
+  <!-- ProjectCard anatomy -->
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9a6316;">ProjectCard</div>
+      <div style="font-size: 13px; color: #6b6659;">Composed of OutcomeLine, NowLine, NextActions and BlockedNote. A state summary, never a task container.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start;">
+
+      <div style="background: #fffdf7; border: 1px solid #ddd6c7; border-radius: 10px; padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 17px; box-shadow: 0 2px 5px rgba(35,33,29,0.05);">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <div style="display: flex; align-items: baseline; gap: 10px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b6659;">01</span>
+            <span style="font-family: 'Literata', Georgia, serif; font-size: 20px; font-weight: 600;">Harbour</span>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #465b66;">11 sessions</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Outcome</div>
+          <div style="font-size: 15px; line-height: 1.45; text-wrap: pretty;"><span style="background: linear-gradient(transparent 62%, #f6e3b4 62%);">Players can see what changed in their scene without asking in Discord.</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Now</div>
+          <div style="font-size: 14px; line-height: 1.5; color: #4c4840; text-wrap: pretty;">Activity feed renders from the events table. Ranking recalc still runs off the old cron path.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Next</div>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><div style="width: 5px; height: 5px; border-radius: 50%; background: #d9a441; margin-top: 7px; flex-shrink: 0;"></div><div style="font-size: 14px; line-height: 1.45;">Point recalc at the events table</div></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><div style="width: 5px; height: 5px; border-radius: 50%; background: #d9a441; margin-top: 7px; flex-shrink: 0;"></div><div style="font-size: 14px; line-height: 1.45;">Settle the forum schema before the migration</div></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><div style="width: 5px; height: 5px; border-radius: 50%; background: #d9a441; margin-top: 7px; flex-shrink: 0;"></div><div style="font-size: 14px; line-height: 1.45;">Review the tournament import PR</div></div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; padding-top: 13px; border-top: 1px solid #e0dacd;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; background: #e2e9ec; color: #465b66; padding: 3px 7px; border-radius: 4px;">narrated</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; background: #e2e9ec; color: #465b66; border: 1px solid #465b66; padding: 2px 6px; border-radius: 4px;">observed</span>
+          <span style="flex-grow: 1;"></span>
+          <span style="font-size: 12px; color: #9a6316;">Why is this here?</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 13px; padding-top: 4px;">
+        <div style="display: flex; flex-direction: column; gap: 3px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9a6316;">emphasis</div><div style="font-size: 12px; color: #6b6659; line-height: 1.45;">A prop derived from the working set. Never a stored field.</div></div>
+        <div style="display: flex; flex-direction: column; gap: 3px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9a6316;">OutcomeLine</div><div style="font-size: 12px; color: #6b6659; line-height: 1.45;">Preserved verbatim. Passive activity can never overwrite it.</div></div>
+        <div style="display: flex; flex-direction: column; gap: 3px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9a6316;">NextActions</div><div style="font-size: 12px; color: #6b6659; line-height: 1.45;">Takes a tuple of at most three. The cap is a type, not a review comment.</div></div>
+        <div style="display: flex; flex-direction: column; gap: 3px;"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9a6316;">BlockedNote</div><div style="font-size: 12px; color: #6b6659; line-height: 1.45;">Absent here, so it renders nothing. No empty field, no green all-clear.</div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Two column component grid -->
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 30px;">
+
+    <!-- NarrateSurface -->
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9a6316;">NarrateSurface</div>
+      <div style="font-size: 13px; color: #6b6659; line-height: 1.45;">No project, priority or date field. Ever. Adding one turns it back into a task box.</div>
+      <div style="background: #fffdf7; border: 1px solid #e0dacd; border-radius: 10px; padding: 20px 22px 16px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 1px 2px rgba(35,33,29,0.04);">
+        <div style="font-family: 'Literata', Georgia, serif; font-size: 20px; line-height: 1.3; color: #7a7466;">What's in your head today?</div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 12px; border-top: 1px solid #e0dacd;">
+          <div style="font-size: 12px; color: #7a7466;">Paste a list, ramble, contradict yourself.</div>
+          <div style="display: flex; align-items: center; gap: 8px; background: #23211d; color: #f8f4ea; padding: 9px 16px; border-radius: 7px; font-size: 13px; font-weight: 600;">
+            <span>Righteo</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="M13 6l6 6-6 6"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BlockedNote -->
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9a6316;">BlockedNote</div>
+      <div style="font-size: 13px; color: #6b6659; line-height: 1.45;">Only a real dependency or decision. Not "waiting on me". Labelled in words, not in colour.</div>
+      <div style="display: flex; flex-direction: column; gap: 6px; background: #f2efe6; border: 1px solid #ddd6c7; border-radius: 7px; padding: 13px 15px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Blocked</div>
+        <div style="font-size: 13px; line-height: 1.45; color: #4c4840;">Cutover needs a sign-off date. Asked Tuesday, nothing back.</div>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #7a7466;">// no blocker: renders null</div>
+    </div>
+
+    <!-- ChangeSummary -->
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9a6316;">ChangeSummary</div>
+      <div style="font-size: 13px; color: #6b6659; line-height: 1.45;">Describes compression, not task creation. Every line carries its provenance.</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: flex-start; gap: 11px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b6659" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px; flex-shrink: 0;"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+          <div style="font-size: 14px; line-height: 1.45; flex-grow: 1;">Focused Harbour around the activity feed.</div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; background: #e2e9ec; color: #465b66; padding: 3px 7px; border-radius: 4px; flex-shrink: 0;">narrated</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 11px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b6659" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px; flex-shrink: 0;"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg>
+          <div style="font-size: 14px; line-height: 1.45; flex-grow: 1;">Moved the Skirmish release check to Friday.</div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; background: #e2e9ec; color: #465b66; padding: 3px 7px; border-radius: 4px; flex-shrink: 0;">narrated</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 11px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b6659" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px; flex-shrink: 0;"><path d="M6 4h12v16l-6-4-6 4z"></path></svg>
+          <div style="font-size: 14px; line-height: 1.45; flex-grow: 1;">Ledger looks blocked on a sign-off date, not on code.</div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; background: transparent; color: #465b66; border: 1px dashed #465b66; padding: 2px 6px; border-radius: 4px; flex-shrink: 0;">inferred</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ClarifyingQuestions -->
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9a6316;">ClarifyingQuestions</div>
+      <div style="font-size: 13px; color: #6b6659; line-height: 1.45;">At most three, and only when the answer materially changes the plan. Skipping is always allowed.</div>
+      <div style="background: #fffdf7; border: 1px solid #ddd6c7; border-radius: 10px; padding: 20px 22px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 2px 5px rgba(35,33,29,0.05);">
+        <div style="font-family: 'Literata', Georgia, serif; font-size: 20px; line-height: 1.3;">Is the import PR more important than the Ledger migration this morning?</div>
+        <div style="display: flex; gap: 9px; align-items: center; flex-wrap: wrap;">
+          <div style="background: #23211d; color: #f8f4ea; padding: 8px 15px; border-radius: 7px; font-size: 13px; font-weight: 600;">the import PR first</div>
+          <div style="border: 1px solid #ddd6c7; color: #23211d; padding: 7px 14px; border-radius: 7px; font-size: 13px;">Ledger migration first</div>
+          <div style="font-size: 13px; color: #6b6659;">Ask me later</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EvidenceRow -->
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9a6316;">EvidenceRow</div>
+      <div style="font-size: 13px; color: #6b6659; line-height: 1.45;">Says what appears to have happened. Never says it mattered, or that it is finished.</div>
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #465b66; width: 108px; flex-shrink: 0;">claude · tue 16:02</span><span style="font-size: 12px; color: #4c4840;">Touched src/feed/events.ts</span></div>
+        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #465b66; width: 108px; flex-shrink: 0;">git · tue 17:40</span><span style="font-size: 12px; color: #4c4840;">4 commits on feed-events, none on main</span></div>
+        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #465b66; width: 108px; flex-shrink: 0;">narration · wed 8:14</span><span style="font-size: 12px; color: #4c4840;">"the feed is nearly there"</span></div>
+      </div>
+    </div>
+
+    <!-- RevisitControl -->
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9a6316;">RevisitControl</div>
+      <div style="font-size: 13px; color: #6b6659; line-height: 1.45;">Deferring, parking and dropping are successful outcomes. They read as relief, not as failure.</div>
+      <div style="display: flex; gap: 9px; align-items: center; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 7px; border: 1px solid #ddd6c7; border-radius: 7px; padding: 7px 13px; font-size: 13px; color: #23211d;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6659" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg>
+          <span>Friday morning</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 7px; border: 1px solid #ddd6c7; border-radius: 7px; padding: 7px 13px; font-size: 13px; color: #23211d;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6659" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14l4 0 2 3h4l2-3 4 0"></path><path d="M5 5h14l1 9H4z"></path></svg>
+          <span>Park it</span>
+        </div>
+        <div style="font-size: 13px; color: #6b6659;">Drop it</div>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #7a7466;">// a revisit is not a due date</div>
+    </div>
+
+  </div>
+
+  <!-- Primitives row -->
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9a6316;">Primitives</div>
+      <div style="font-size: 13px; color: #6b6659;">Thin adaptations of shadcn on Base UI. Deliberately boring: the product lives in the layer above.</div>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+      <div style="background: #23211d; color: #f8f4ea; padding: 10px 18px; border-radius: 7px; font-size: 14px; font-weight: 600;">Accept all</div>
+      <div style="border: 1px solid #ddd6c7; color: #23211d; padding: 9px 17px; border-radius: 7px; font-size: 14px;">Correct one thing</div>
+      <div style="color: #6b6659; padding: 9px 6px; font-size: 14px;">Show the raw narration</div>
+      <div style="background: #23211d; color: #f8f4ea; padding: 10px 18px; border-radius: 7px; font-size: 14px; font-weight: 600; border: 1px solid #d9a441; box-shadow: 0 0 0 3px rgba(217,164,65,0.42);">Focused</div>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; background: #e2e9ec; color: #465b66; padding: 3px 7px; border-radius: 4px;">chip</span>
+      <div style="display: flex; align-items: center; gap: 7px; font-size: 13px; color: #9a6316;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+        <span>Why is this here?</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- OutcomeLine -->
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9a6316;">OutcomeLine</div>
+      <div style="font-size: 13px; color: #6b6659; max-width: 760px;">The only element allowed to carry the highlighter. It marks the one sentence that must survive everything else on the card. Used anywhere else, it stops meaning anything.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
+      <div style="background: #fffdf7; border: 1px solid #ddd6c7; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 2px 5px rgba(35,33,29,0.05);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Outcome</div>
+        <div style="font-size: 15px; line-height: 1.45; text-wrap: pretty;"><span style="background: linear-gradient(transparent 62%, #f6e3b4 62%);">Players can see what changed in their scene without asking in Discord.</span></div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #7a7466;">focal</div>
+      </div>
+      <div style="background: #fffdf7; border: 1px solid #ddd6c7; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Outcome</div>
+        <div style="font-size: 15px; line-height: 1.45; text-wrap: pretty;">Players can see what changed in their scene without asking in Discord.</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #7a7466;">active, not focal</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    a { color: #9a6316; }
+    a:hover { color: #74490f; }
+  </style>
+</helmet>
+
+<div style="width: 1040px; min-height: 980px; background: #f5f2ea; color: #23211d; padding: 40px 44px 36px; display: flex; flex-direction: column; gap: 30px;">
+
+  <!-- Foundations strip -->
+  <div style="display: flex; gap: 34px; align-items: flex-start; padding-bottom: 22px; border-bottom: 1px solid #e0dacd;">
+    <div style="display: flex; flex-direction: column; gap: 9px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Canvas and ink</div>
+      <div style="display: flex; gap: 7px;">
+        <div style="width: 40px; height: 40px; border-radius: 4px; background: #f5f2ea; border: 1px solid #ddd6c7;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 4px; background: #fffdf7; border: 1px solid #ddd6c7;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 4px; background: #23211d;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 4px; background: #6b6659;"></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 9px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Orientation (highlighter)</div>
+      <div style="display: flex; gap: 7px;">
+        <div style="width: 40px; height: 40px; border-radius: 4px; background: #f6e3b4;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 4px; background: #d9a441;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 4px; background: #9a6316;"></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 9px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Evidence (cool)</div>
+      <div style="display: flex; gap: 7px;">
+        <div style="width: 40px; height: 40px; border-radius: 4px; background: #e2e9ec;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 4px; background: #465b66;"></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 5px; flex-grow: 1;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Type</div>
+      <div style="font-family: 'Literata', Georgia, serif; font-size: 20px; color: #23211d;">Literata, state and greeting</div>
+      <div style="font-size: 14px; color: #4c4840;">Public Sans, body and interface</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6b6659;">IBM Plex Mono, evidence only</div>
+    </div>
+  </div>
+
+  <!-- Orientation -->
+  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px;">
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <div style="font-family: 'Literata', Georgia, serif; font-size: 34px; font-weight: 500; letter-spacing: -0.01em;">Morning Sam</div>
+      <div style="font-size: 15px; color: #6b6659; max-width: 560px;">You touched five projects yesterday. Two look like the main thread.</div>
+    </div>
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6b6659; letter-spacing: 0.04em;">WED 19 AUG</div>
+  </div>
+
+  <!-- Narrate -->
+  <div style="background: #fffdf7; border: 1px solid #e0dacd; border-radius: 10px; padding: 22px 24px 18px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 1px 2px rgba(35,33,29,0.04);">
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #9a6316;">Narrate</div>
+      <div style="font-family: 'Literata', Georgia, serif; font-size: 19px; color: #7a7466;">What's in your head today?</div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 14px; border-top: 1px solid #e0dacd;">
+      <div style="font-size: 13px; color: #7a7466;">Paste a list, ramble, contradict yourself. No project or date needed.</div>
+      <div style="display: flex; align-items: center; gap: 8px; background: #23211d; color: #f8f4ea; padding: 10px 18px; border-radius: 7px; font-size: 14px; font-weight: 600;">
+        <span>Righteo</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="M13 6l6 6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary -->
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Primary</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
+
+      <!-- Harbour -->
+      <div style="background: #fffdf7; border: 1px solid #ddd6c7; border-radius: 10px; padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 17px; box-shadow: 0 2px 5px rgba(35,33,29,0.05);">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <div style="font-family: 'Literata', Georgia, serif; font-size: 20px; font-weight: 600;">Harbour</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #465b66;">11 sessions</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Outcome</div>
+          <div style="font-size: 15px; line-height: 1.45; text-wrap: pretty;"><span style="background: linear-gradient(transparent 62%, #f6e3b4 62%);">Players can see what changed in their scene without asking in Discord.</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Now</div>
+          <div style="font-size: 14px; line-height: 1.5; color: #4c4840; text-wrap: pretty;">Activity feed renders from the events table. Ranking recalc still runs off the old cron path.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Next</div>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><div style="width: 5px; height: 5px; border-radius: 50%; background: #d9a441; margin-top: 7px; flex-shrink: 0;"></div><div style="font-size: 14px; line-height: 1.45;">Point recalc at the events table</div></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><div style="width: 5px; height: 5px; border-radius: 50%; background: #d9a441; margin-top: 7px; flex-shrink: 0;"></div><div style="font-size: 14px; line-height: 1.45;">Settle the forum schema before the migration</div></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><div style="width: 5px; height: 5px; border-radius: 50%; background: #d9a441; margin-top: 7px; flex-shrink: 0;"></div><div style="font-size: 14px; line-height: 1.45;">Review the tournament import PR</div></div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; padding-top: 13px; border-top: 1px solid #e0dacd;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #465b66; background: #e2e9ec; padding: 3px 7px; border-radius: 4px;">narrated</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #465b66; background: #e2e9ec; border: 1px solid #465b66; padding: 2px 6px; border-radius: 4px;">observed</span>
+          <span style="flex-grow: 1;"></span>
+          <span style="font-size: 12px; color: #9a6316;">Why is this here?</span>
+        </div>
+      </div>
+
+      <!-- Ledger -->
+      <div style="background: #fffdf7; border: 1px solid #ddd6c7; border-radius: 10px; padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 17px; box-shadow: 0 2px 5px rgba(35,33,29,0.05);">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <div style="font-family: 'Literata', Georgia, serif; font-size: 20px; font-weight: 600;">Ledger</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #465b66;">4 sessions</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Outcome</div>
+          <div style="font-size: 15px; line-height: 1.45; text-wrap: pretty;"><span style="background: linear-gradient(transparent 62%, #f6e3b4 62%);">The season runs on the new data model with no manual reconciliation.</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Now</div>
+          <div style="font-size: 14px; line-height: 1.5; color: #4c4840; text-wrap: pretty;">Migration passes on staging. Production cutover is not scheduled.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Next</div>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><div style="width: 5px; height: 5px; border-radius: 50%; background: #d9a441; margin-top: 7px; flex-shrink: 0;"></div><div style="font-size: 14px; line-height: 1.45;">Dry-run against a production snapshot</div></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><div style="width: 5px; height: 5px; border-radius: 50%; background: #d9a441; margin-top: 7px; flex-shrink: 0;"></div><div style="font-size: 14px; line-height: 1.45;">Pick a cutover window</div></div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; background: #f2efe6; border: 1px solid #ddd6c7; border-radius: 7px; padding: 12px 14px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Blocked</div>
+          <div style="font-size: 13px; line-height: 1.45; color: #4c4840;">Cutover needs a sign-off date. Asked Tuesday, nothing back.</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; padding-top: 13px; border-top: 1px solid #e0dacd;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #465b66; background: transparent; border: 1px dashed #465b66; padding: 2px 6px; border-radius: 4px;">inferred</span>
+          <span style="flex-grow: 1;"></span>
+          <span style="font-size: 12px; color: #9a6316;">Why is this here?</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Also active -->
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #6b6659;">Also active</div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <div style="display: flex; flex-direction: column; gap: 3px; background: #f2efe6; border-radius: 8px; padding: 11px 15px; min-width: 190px;">
+        <div style="font-family: 'Literata', Georgia, serif; font-size: 15px; font-weight: 500;">Toolbox</div>
+        <div style="font-size: 12px; color: #6b6659;">Quiet since Friday</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 3px; background: #f2efe6; border-radius: 8px; padding: 11px 15px; min-width: 190px;">
+        <div style="font-family: 'Literata', Georgia, serif; font-size: 15px; font-weight: 500;">Righteo</div>
+        <div style="font-size: 12px; color: #6b6659;">Design docs, no code yet</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 3px; background: #f2efe6; border-radius: 8px; padding: 11px 15px; min-width: 190px;">
+        <div style="font-family: 'Literata', Georgia, serif; font-size: 15px; font-weight: 500;">Skirmish</div>
+        <div style="font-size: 12px; color: #6b6659;">Release check kept for Friday</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
